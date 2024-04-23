@@ -74,7 +74,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: rgba(1, 21, 26, 0.9);
-  color: #f2d16b;
+  color: #95c11e;
 }
 
 h1, h2, h3 {
@@ -157,7 +157,7 @@ img {
 
 .nav__logo {
   display: flex;
-  width: 1.5rem;
+  /* width: 1.5rem; */
 }
 
 .nav__toggle {
@@ -792,4 +792,25 @@ img {
 
 .third {
   top: 66.6%;
+}
+
+
+#cursor {
+  height: 20px;
+  width: 20px;
+  background-color: #95c11e;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 99;
+  transition: all linear 0.1s;
+}
+#cursor-blur {
+  height: 500px;
+  width: 500px;
+  background-color: rgba(150, 193, 30, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  filter: blur(80px);
+  z-index: 9;
+  transition: all linear 0.4s;
 }
