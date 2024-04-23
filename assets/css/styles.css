@@ -4,6 +4,7 @@
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3rem;
+  --cubicbz: cubic-bezier(.9, 0, .1, 1);
   /*========== Colors ==========*/
   --hue-color: 709;
   --black-color: hsl(var(--hue-color), 4%, 4%);
@@ -801,7 +802,7 @@ img {
 }
 
 
-#cursor {
+/* #cursor {
   height: 20px;
   width: 20px;
   background-color: #95c11e;
@@ -809,7 +810,7 @@ img {
   position: fixed;
   z-index: 99;
   transition: all linear 0.1s;
-}
+} */
 #cursor-blur {
   height: 500px;
   width: 500px;
@@ -820,66 +821,90 @@ img {
   z-index: 9;
   transition: all linear 0.4s;
 }
-
 .btn-link {
-	/* position: relative;
+	position: relative;
 	display: inline-block;
 	padding: 15px 50px;
 	padding-right: 85px;
 	margin-top: 50px;
-	color: var(--pr-color);
+	color: pink;
 	text-decoration: none;
 	border-radius: 10px;
-	overflow: hidden; */
+  cursor: pointer;
+	overflow: hidden;
+  z-index: var(--z-fixed);
+
 	transform: translateY(20px);
-	opacity: 0;
+	/* opacity: 0; */
 	transition: .8s var(--cubicbz);
 }
 
 .first_page .btn-link {
 	background: var(--p1-color);
+  cursor: pointer;
+  z-index: var(--z-fixed);
+
 }
 
-.second_page .btn-link {
-	background: var(--p2-color);
-}
+/* .second_page .btn-link {
+	background: palegreen;
+  cu
+} */
 
 .btn-link img {
 	position: absolute;
 	width: 35px;
 	height: auto;
 	right: 35px;
+  z-index: var(--z-fixed);
+
 	will-change: transform;
 	transition: .8s var(--cubicbz);
+  cursor: pointer;
 }
 
 .btn-link img:first-child {
 	top: 50%;
+  cursor: pointer;
+  z-index: var(--z-fixed);
+
 	transform: translateY(-50%);
 }
 
 .btn-link img:last-child {
 	bottom: -100%;
+  cursor: pointer;
+  z-index: var(--z-fixed);
+
 }
 
 .first_page .btn-link:hover {
 	color: var(--p1-color);
-	background: var(--second-color);
-	box-shadow: 0 10px 20px -15px var(--p1-color);
-}
+	background: peachpuff;
+	box-shadow: 0 10px 20px -15px greenyellow;
+  cursor: pointer;
+  z-index: var(--z-fixed);
 
+}
+/* 
 .second_page .btn-link:hover {
 	color: var(--p2-color);
 	background: var(--second-color);
 	box-shadow: 0 10px 20px -15px var(--p2-color);
-}
+} */
 
 .btn-link:hover img:first-child {
 	top: -100%;
 	transform: translateY(0);
+  cursor: pointer;
+  z-index: var(--z-fixed);
+
 }
 
 .btn-link:hover img:last-child {
 	bottom: 50%;
 	transform: translateY(50%);
+  cursor: pointer;
+  z-index: var(--z-fixed);
+
 }
